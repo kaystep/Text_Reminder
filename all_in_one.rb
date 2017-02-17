@@ -5,12 +5,12 @@ require 'json'
 
 
 #Defined constant for your Spreadsheet ID
-SPREADSHEET_ID = '1ffnWnDcoiMG3NYxPmRNtYDKFZg4VapLcg_xPdRk_vxw'
+SPREADSHEET_ID = 'put your spreadsheet ID here'
 
 
 #URL for my to-do list converted into JSON
 def spreadsheet_url
-	"https://spreadsheets.google.com/feeds/list/1ffnWnDcoiMG3NYxPmRNtYDKFZg4VapLcg_xPdRk_vxw/od6/public/values?alt=json"
+	"Put your spreadsheet url in JSON form here"
 end
 
 #Open my Google Doc and parse through the data
@@ -32,14 +32,14 @@ end
 
 
 # put your own credentials here
-account_sid = 'AC765d7e39286e78bf171516cecc9068da'
-auth_token = '4fecd2e23f5515db45059d19427ddd88'
+account_sid = 'your account sid for twilio'
+auth_token = 'your account token for twilio'
 
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new account_sid, auth_token
 
 @client.account.messages.create({
-  :from => '17342344318',
-  :to => '+15174491114', 
+  :from => 'twilio #',
+  :to => 'Personal Cell #', 
   :body => items_from_to_do_list,
   })
