@@ -2,7 +2,7 @@
 
 This is a ruby script that I host on Heroku to send daily text reminders to my phone
 
-It pulls data off of a googlespreadsheet that I can edit in reaily time
+It pulls data off of a googlespreadsheet that I can edit in real time
 
 Then twice a day it parses through the data and uses Twillio to send reminders to my phone.
 
